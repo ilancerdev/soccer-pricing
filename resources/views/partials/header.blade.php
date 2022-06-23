@@ -12,17 +12,13 @@
           <li class="drop-down"><a href="#services">Services</a>
             <ul>
               <li><a href="/weekschedule">Week Matches</a></li>
-              <li><a href="/matchodds">Match odds Selection</a></li>
-              <li><a href="/ahodds">Asian Handicap Selection</a></li>
-              <!--<li class="drop-down"><a href="#">Drop Down 2</a>
+            
+              <li class="drop-down"><a href="#">Week Bets</a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="/matchodds">Match odds Selection</a></li>
+                  <li><a href="/ahodds">Asian Handicap Selection</a></li>
                 </ul>
-              </li>-->
+              </li>
               <li><a href="/matchschedule">Match Schedule</a></li>
               <li><a href="/history">Historic Data</a></li>
               <li><a href="/players">Player's data</a></li>
