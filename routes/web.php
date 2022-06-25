@@ -6,6 +6,7 @@ use App\Http\Controllers\PlayersController;
 use App\Http\Controllers\MatchScheduleController;
 use App\Http\Controllers\HistoricDataController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\WeekBetController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,12 @@ Route::get('/weekschedule',                         [WeekScheduleController::cla
 Route::get("/showMatchsOfThisWeek_MO",              [WeekScheduleController::class ,"showAllMatchesOfWeek_MO"]);
 Route::get("/showMatchsOfThisWeek_OU",              [WeekScheduleController::class , "showAllMatchesOfWeek_OU"]);
 Route::get('/showMatchsOfThisWeek_AH',              [WeekScheduleController::class ,"showAllMatchesOfWeek_AH"]);
+
+////////////////////// week bet pages ////////////////////////////////////////////////
+Route::get('/matchodds',                            [WeekBetController::class, 'showMatchOddsSelctionPage']);
+Route::get('/weekMOBet',                            [WeekBetController::class, 'weekMOBet']);
+Route::get("/ahodds",                               [WeekBetController::class ,"showAHoddSelectionPage"]);
+Route::get("/weekAHBet",                            [WeekBetController::class ,"weekAHBet"]);
 
 //////////////// players data page ///////////////////////
 Route::view('/players',                             'players.playerlist')  ->middleware("auth");
