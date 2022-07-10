@@ -87,7 +87,13 @@ class WeekBetController extends Controller
                 }
             )
             
-            -> where('a.status', '=', 'END')
+            -> where(function($q){
+                $q -> orwhere('a.status', '=', 'END')
+                   ->orwhere('a.status', '=', 'LIVE');
+                
+                }
+                
+            ) 
 
             ->leftjoin('real_mo_price_cl as r', 'a.CL_mo_refer_id', '=', 'r.id')
             -> where(function($q) use ($first_date){
@@ -184,7 +190,13 @@ class WeekBetController extends Controller
                 }
             )
             
-            -> where('a.status', '=', 'END')   
+            -> where(function($q){
+                $q -> orwhere('a.status', '=', 'END')
+                   ->orwhere('a.status', '=', 'LIVE');
+                
+                }
+                
+            )   
             -> where(function($q) use ($first_date){
                 for($i = 0; $i < 7; $i++)
                 {
