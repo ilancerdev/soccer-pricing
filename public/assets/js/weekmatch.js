@@ -255,20 +255,6 @@ function get_weekMatches_withMO()
                 "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Home ? matches_object[i]. Real_Home: '' ) + "</td>" +
                 "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Draw ? matches_object[i]. Real_Draw : '') + "</td>" +
                 "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Away ? matches_object[i]. Real_Away : '') + "</td>" +
-
-                "<td align='center'  class= 'table-danger'>" + home_bet + "</td>" +
-                "<td align='center'  class= 'table-danger'>" + draw_bet + "</td>" +
-                "<td align='center'  class= 'table-danger'>" + away_bet + "</td>" +
-
-
-                "<td align='center'  class= 'table-warning'>" + home_Stake + "</td>" +
-                "<td align='center'  class= 'table-warning'>" + draw_Stake + "</td>" +
-                "<td align='center'  class= 'table-warning'>" + away_Stake + "</td>" +
-
-                
-                "<td align='center'  class= 'table-primary'>" + home_PnL + "</td>" +
-                "<td align='center'  class= 'table-primary'>" + draw_PnL + "</td>" +
-                "<td align='center'  class= 'table-primary'>" + away_PnL + "</td>" +
                 
                 
                 "</tr>";

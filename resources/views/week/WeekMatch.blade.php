@@ -66,17 +66,7 @@
                         <th>Real_Draw                       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19'/></th>
                         <th>Real_Away                       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20'/></th>
 
-                        <th>Home_Bet                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21'/></th>
-                        <th>Draw_Bet                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '22'/></th>
-                        <th>Away_Bet                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '23'/></th>
-
-                        <th>Home_Stake                      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '24'/></th>
-                        <th>Draw_Stake                      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '25'/></th>
-                        <th>Away_Stake                      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '26'/></th>
-
-                        <th>Home_PnL                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '27'/></th>
-                        <th>Draw_PnL                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '28'/></th>
-                        <th>Away_PnL                        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '29'/></th>
+                     
 
                     
 
