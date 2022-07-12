@@ -104,136 +104,140 @@ function get_weekMOBets()
             
             for(var i = 0; i< len; i++)
             {
-              var home_bet = "";
-              var home_Stake = "" , home_PnL = "", draw_Stake = "", draw_PnL = "", away_Stake = "", away_PnL = "";
-              var draw_bet = "";
-              var away_bet = "";
-              if(matches_object[i]. Real_Home)
-              {
-                real_home_price = parseFloat(matches_object[i]. Real_Home);
-                actual_home_price = parseFloat(matches_object[i]. highest_Home)
-                if (actual_home_price > real_home_price)
-                {
-                  home_bet = "Bet";
-                  if(matches_object[i].Result != '-'){
-                    home_Stake = get_Stake_Pnl(actual_home_price, real_home_price)
-                  
-                    home_Stake = home_Stake.toFixed(2);
-                    home_PnL = (matches_object[i].Result == 'H') ? home_Stake * (actual_home_price - 1): (0 - home_Stake);
-                    home_PnL = home_PnL.toFixed(2)
-                  }
-                  
-                }
-                else
-                {
-                  home_bet = "No Bet";
-                  if(matches_object[i].Result != '-')
-                  {
-                    home_Stake = "0"
-                    home_PnL = "0"
-                  }
-                  
-                }
-              }
+              if(matches_object[i].cream_status == "Cream v Nom-Cream") {
 
-              if(matches_object[i]. Real_Draw){
-                real_draw_price = parseFloat(matches_object[i]. Real_Draw);
-                actual_draw_price = parseFloat(matches_object[i]. highest_Draw)
-                if (actual_draw_price > real_draw_price)
-                {
-                  draw_bet = "Bet";
-                  if(matches_object[i].Result != '-'){
-                    draw_Stake = get_Stake_Pnl(actual_draw_price, real_draw_price)
-                    draw_Stake = draw_Stake.toFixed(2);
-                    draw_PnL = (matches_object[i].Result == 'D') ? draw_Stake * (actual_draw_price - 1): (0 - draw_Stake);
-                    draw_PnL = draw_PnL.toFixed(2)
-                  }
-                }
-                  
-                else{
-                  draw_bet = "No Bet"
-                  if(matches_object[i].Result != '-')
-                  {
-                    draw_Stake = "0"
-                    draw_PnL = "0"
-                  }
-                }
-                
-              }
-
-              if(matches_object[i]. Real_Away){
-                real_away_price = parseFloat(matches_object[i]. Real_Away);
-                actual_away_price = parseFloat(matches_object[i]. highest_Away)
-                if (actual_away_price > real_away_price)
-                {
-                  away_bet = "Bet";
-                  if(matches_object[i].Result != '-'){
-                    away_Stake = get_Stake_Pnl(actual_away_price, real_away_price)
-                    away_Stake = away_Stake.toFixed(2);
-                    away_PnL = (matches_object[i].Result == 'A') ? away_Stake * (actual_away_price - 1): (0 - away_Stake);
-                    away_PnL = away_PnL.toFixed(2)
-                  }
-                }
-                  
-                else{
-                  away_bet = "No Bet"
-                  if(matches_object[i].Result != '-')
-                  {
-                    away_Stake = "0"
-                    away_PnL = "0"
-                  }
-                }
-                
-              }
               
+                  var home_bet = "";
+                  var home_Stake = "" , home_PnL = "", draw_Stake = "", draw_PnL = "", away_Stake = "", away_PnL = "";
+                  var draw_bet = "";
+                  var away_bet = "";
+                  if(matches_object[i]. Real_Home)
+                  {
+                    real_home_price = parseFloat(matches_object[i]. Real_Home);
+                    actual_home_price = parseFloat(matches_object[i]. highest_Home)
+                    if (actual_home_price > real_home_price)
+                    {
+                      home_bet = "Bet";
+                      if(matches_object[i].Result != '-'){
+                        home_Stake = get_Stake_Pnl(actual_home_price, real_home_price)
+                      
+                        home_Stake = home_Stake.toFixed(2);
+                        home_PnL = (matches_object[i].Result == 'H') ? home_Stake * (actual_home_price - 1): (0 - home_Stake);
+                        home_PnL = home_PnL.toFixed(2)
+                      }
+                      
+                    }
+                    else
+                    {
+                      home_bet = "No Bet";
+                      if(matches_object[i].Result != '-')
+                      {
+                        home_Stake = "0"
+                        home_PnL = "0"
+                      }
+                      
+                    }
+                  }
 
-              str_tr += "<tr>" +
-                
-                "<td align='center' class = 'table-light'>" + matches_object[i].League + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Season + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Date + "</td>" +
-                
-                "<td align='center'  class = 'table-light'>" + matches_object[i].wn + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Game + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].cream_status + "</td>" +
+                  if(matches_object[i]. Real_Draw){
+                    real_draw_price = parseFloat(matches_object[i]. Real_Draw);
+                    actual_draw_price = parseFloat(matches_object[i]. highest_Draw)
+                    if (actual_draw_price > real_draw_price)
+                    {
+                      draw_bet = "Bet";
+                      if(matches_object[i].Result != '-'){
+                        draw_Stake = get_Stake_Pnl(actual_draw_price, real_draw_price)
+                        draw_Stake = draw_Stake.toFixed(2);
+                        draw_PnL = (matches_object[i].Result == 'D') ? draw_Stake * (actual_draw_price - 1): (0 - draw_Stake);
+                        draw_PnL = draw_PnL.toFixed(2)
+                      }
+                    }
+                      
+                    else{
+                      draw_bet = "No Bet"
+                      if(matches_object[i].Result != '-')
+                      {
+                        draw_Stake = "0"
+                        draw_PnL = "0"
+                      }
+                    }
+                    
+                  }
 
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Score + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Result + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Home_team_name + "</td>" +
+                  if(matches_object[i]. Real_Away){
+                    real_away_price = parseFloat(matches_object[i]. Real_Away);
+                    actual_away_price = parseFloat(matches_object[i]. highest_Away)
+                    if (actual_away_price > real_away_price)
+                    {
+                      away_bet = "Bet";
+                      if(matches_object[i].Result != '-'){
+                        away_Stake = get_Stake_Pnl(actual_away_price, real_away_price)
+                        away_Stake = away_Stake.toFixed(2);
+                        away_PnL = (matches_object[i].Result == 'A') ? away_Stake * (actual_away_price - 1): (0 - away_Stake);
+                        away_PnL = away_PnL.toFixed(2)
+                      }
+                    }
+                      
+                    else{
+                      away_bet = "No Bet"
+                      if(matches_object[i].Result != '-')
+                      {
+                        away_Stake = "0"
+                        away_PnL = "0"
+                      }
+                    }
+                    
+                  }
+                  
 
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Away_team_name + "</td>" +
+                  str_tr += "<tr>" +
+                    
+                    "<td align='center' class = 'table-light'>" + matches_object[i].League + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Season + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Date + "</td>" +
+                    
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].wn + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Game + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].cream_status + "</td>" +
 
-                "<td align='center'  class = 'table-light'>" + matches_object[i].staticRank + "</td>" +
-                "<td align='center'  class = 'table-light'>" + matches_object[i].Dynamic_HRank_6 + " v " + matches_object[i].Dynamic_ARank_6 + "</td>" +
-                "<td align='center'  class = 'table-light'>" +  matches_object[i].Dynamic_HRank_8 + " v " + matches_object[i].Dynamic_ARank_8 + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Score + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Result + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Home_team_name + "</td>" +
 
-                "<td align='center'  class = 'table-light'>" +  ( matches_object[i].home_team_strength ? matches_object[i].home_team_strength: '') + "</td>" +
-                "<td align='center'  class = 'table-light'>" +  ( matches_object[i].away_team_strength ? matches_object[i].away_team_strength: '')+ "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Away_team_name + "</td>" +
 
-                "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Home+"" ? matches_object[i]. highest_Home : '')+  "</td>" +
-                "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Draw+"" ?matches_object[i]. highest_Draw: '')+ "</td>" +
-                "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Away+"" ? matches_object[i]. highest_Away: '')+ "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].staticRank + "</td>" +
+                    "<td align='center'  class = 'table-light'>" + matches_object[i].Dynamic_HRank_6 + " v " + matches_object[i].Dynamic_ARank_6 + "</td>" +
+                    "<td align='center'  class = 'table-light'>" +  matches_object[i].Dynamic_HRank_8 + " v " + matches_object[i].Dynamic_ARank_8 + "</td>" +
 
-                "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Home ? matches_object[i]. Real_Home: '' ) + "</td>" +
-                "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Draw ? matches_object[i]. Real_Draw : '') + "</td>" +
-                "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Away ? matches_object[i]. Real_Away : '') + "</td>" +
+                    "<td align='center'  class = 'table-light'>" +  ( matches_object[i].home_team_strength ? matches_object[i].home_team_strength: '') + "</td>" +
+                    "<td align='center'  class = 'table-light'>" +  ( matches_object[i].away_team_strength ? matches_object[i].away_team_strength: '')+ "</td>" +
 
-                "<td align='center'  class= 'table-danger'>" + home_bet + "</td>" +
-                "<td align='center'  class= 'table-danger'>" + draw_bet + "</td>" +
-                "<td align='center'  class= 'table-danger'>" + away_bet + "</td>" +
+                    "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Home+"" ? matches_object[i]. highest_Home : '')+  "</td>" +
+                    "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Draw+"" ?matches_object[i]. highest_Draw: '')+ "</td>" +
+                    "<td align='center' class = 'table-success'>" +  (matches_object[i]. highest_Away+"" ? matches_object[i]. highest_Away: '')+ "</td>" +
+
+                    "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Home ? matches_object[i]. Real_Home: '' ) + "</td>" +
+                    "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Draw ? matches_object[i]. Real_Draw : '') + "</td>" +
+                    "<td align='center' class= 'table-info'>" + ( matches_object[i]. Real_Away ? matches_object[i]. Real_Away : '') + "</td>" +
+
+                    "<td align='center'  class= 'table-danger'>" + home_bet + "</td>" +
+                    // "<td align='center'  class= 'table-danger'>" + draw_bet + "</td>" +
+                    // "<td align='center'  class= 'table-danger'>" + away_bet + "</td>" +
 
 
-                "<td align='center'  class= 'table-warning'>" + home_Stake + "</td>" +
-                "<td align='center'  class= 'table-warning'>" + draw_Stake + "</td>" +
-                "<td align='center'  class= 'table-warning'>" + away_Stake + "</td>" +
+                    "<td align='center'  class= 'table-warning'>" + home_Stake + "</td>" +
+                    // "<td align='center'  class= 'table-warning'>" + draw_Stake + "</td>" +
+                    // "<td align='center'  class= 'table-warning'>" + away_Stake + "</td>" +
 
-                
-                "<td align='center'  class= 'table-primary'>" + home_PnL + "</td>" +
-                "<td align='center'  class= 'table-primary'>" + draw_PnL + "</td>" +
-                "<td align='center'  class= 'table-primary'>" + away_PnL + "</td>" +
-                
-                
-                "</tr>";
+                    
+                    "<td align='center'  class= 'table-primary'>" + home_PnL + "</td>" +
+                    // "<td align='center'  class= 'table-primary'>" + draw_PnL + "</td>" +
+                    // "<td align='center'  class= 'table-primary'>" + away_PnL + "</td>" +
+                    
+                    
+                    "</tr>";
+                }
             }
             $('#tbody_MO').append(str_tr);
             $("#loader").fadeOut("fast");
