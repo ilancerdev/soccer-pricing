@@ -56,13 +56,13 @@ class WeekBetController extends Controller
             ->join('team_list as c', 'c.team_id', '=', 'a.away_team_id')
             ->join('season as d', 'd.season_id', '=', 'a.season_id')
             ->join('league as e', 'e.league_id', '=', 'a.league_id')
-            ->join('season_league_team_info as f', 
+            ->leftJoin('season_league_team_info as f', 
                 function($join) 
                 {
                     $join->on('a.season_id', '=','f.season_id');
                     $join->on('a.home_team_id', '=', 'f.team_id');
                 })
-            ->join('season_league_team_info as g', 
+            ->leftJoin('season_league_team_info as g', 
                 function($join) 
                 {
                     $join->on('a.season_id', '=','g.season_id');
