@@ -40,8 +40,7 @@ class MatchScheduleController extends Controller
                     INNER JOIN team_list AS c ON a.`away_team_id` = c.`team_id`
                     INNER JOIN season AS d ON a.`season_id` = d.`season_id`
                     INNER JOIN league AS e ON a.`league_id` = e.`league_id`
-                    INNER JOIN season_league_team_info AS f ON a.`season_id` = f.`season_id` AND a.`home_team_id` = f.`team_id`
-                    INNER JOIN season_league_team_info AS g ON a.`season_id` = g.`season_id` AND a.`away_team_id` = g.`team_id`
+                    
                 WHERE a.`season_id` = ".$season_id." AND a.`league_id` = ".$league_id." 
                 ORDER BY a.`date`");
             }
