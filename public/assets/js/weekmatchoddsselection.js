@@ -104,7 +104,7 @@ function get_weekMOBets()
             
             for(var i = 0; i< len; i++)
             {
-              if(matches_object[i].cream_status == "Cream v Nom-Cream") {
+              if(matches_object[i].cream_status == "Cream v Non-Cream") {
 
               
                   var home_bet = "";
