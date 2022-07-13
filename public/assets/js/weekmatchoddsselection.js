@@ -118,13 +118,16 @@ function get_weekMOBets()
                     if (actual_home_price > real_home_price)
                     {
                       home_bet = "Bet";
-                      if(matches_object[i].Result != '-'){
+                      
                         home_Stake = get_Stake_Pnl(actual_home_price, real_home_price)
                       
                         home_Stake = home_Stake.toFixed(2);
-                        home_PnL = (matches_object[i].Result == 'H') ? home_Stake * (actual_home_price - 1): (0 - home_Stake);
-                        home_PnL = home_PnL.toFixed(2)
-                      }
+                        if (matches_object[i].Result != "-"){
+                          home_PnL = (matches_object[i].Result == 'H') ? home_Stake * (actual_home_price - 1): (0 - home_Stake);
+                          home_PnL = home_PnL.toFixed(2)
+                        }
+                        
+                      
                       
                     }
                     else
