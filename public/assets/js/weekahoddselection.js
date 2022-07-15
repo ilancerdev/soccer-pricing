@@ -97,13 +97,16 @@ function get_weekMatches_withAH()
             var str_tr = "";
             for(var i = 0; i< len; i++)
             {
-              str_tr += "<tr>" +
+              if (matches_object[i].cream_status == "Non-Cream v Cream"){
+                str_tr += "<tr>" +
                 
                 "<td align='center'>" + matches_object[i].League + "</td>" +
                 "<td align='center'>" + matches_object[i].Season + "</td>" +
                 "<td align='center'>" + matches_object[i].Date + "</td>" +
+                
                 "<td align='center'>" + matches_object[i].WN + "</td>" +
                 "<td align='center'>" + matches_object[i].Game + "</td>" +
+                "<td align='center'>" + matches_object[i].cream_status + "</td>" +
                 "<td align='center'>" + matches_object[i].Score + "</td>" +
                 "<td align='center'>" + matches_object[i].Result + "</td>" +
                 "<td align='center'>" + matches_object[i].Home_team_name + "</td>" +
@@ -132,6 +135,8 @@ function get_weekMatches_withAH()
                 "<td align='center'>" +   "</td>" +
                 
                 "</tr>";
+              }
+            
             }
             $('#tbody_AH').append(str_tr);
             $('#WeekMatchTable_AH').dataTable({

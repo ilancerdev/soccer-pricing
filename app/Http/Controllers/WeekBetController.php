@@ -211,6 +211,10 @@ class WeekBetController extends Controller
                 DB::raw('a.`date` AS Date') , 
                 DB::raw('a.WN') , 
                 DB::raw(" CONCAT(b.`team_name` , ' : ', c.`team_name` ) AS Game"),
+                DB::raw("CONCAT ( (SELECT IF ((SELECT cream_status FROM cream_team_list  WHERE team_id = a.home_team_id and season_id = a.season_id) != 'Non-Cream',(SELECT cream_status FROM cream_team_list WHERE team_id = a.home_team_id and season_id = a.season_id) ,'Non-Cream' )), 
+                ' v ' , 
+                (SELECT IF ((SELECT cream_status FROM cream_team_list WHERE team_id = a.away_team_id and season_id = a.season_id) != 'Non-Cream',(SELECT cream_status FROM cream_team_list WHERE team_id = a.away_team_id and season_id = a.season_id ) ,'Non-Cream' ))) AS cream_status") , 
+                
                 DB::raw("IF(a.status = 'END', CONCAT(a.`total_home_score` , ' : ', a.`total_away_score` ), '- : -' ) AS Score"),
                 DB::raw('IF(a.status = "END", IF( a.total_home_score > a.total_away_score, "H" , IF(a.total_home_score = a.total_away_score ,"D" ,"A") )  , "-") AS Result'),
                 
