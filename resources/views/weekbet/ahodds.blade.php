@@ -49,56 +49,12 @@
                 <th>Dy_Rank(6)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '16'/></th>
                 <th>Dy_Rank(8)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '17'/></th>
 
-                <th>AH -2.0_1   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '18' checked/></th>
-                <th>AH -2.0_2   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
+                <th>AH Market   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '18' checked/></th>
+                <th>AH Bet   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
                 
-                <th>AH -1.75_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
-                <th>AH -1.75_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
-
-                <th>AH -1.5_1   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '22' checked/></th>
-                <th>AH -1.5_2   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '23' checked/></th>
-                
-                <th>AH -1.25_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '24' checked/></th>
-                <th>AH -1.25_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '25' checked/></th>
-                
-                <th>AH -1.0_1   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '26' checked/></th>
-                <th>AH -1.0_2   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '27' checked/></th>
-                
-                <th>AH -0.75_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '28' checked/></th>
-                <th>AH -0.75_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '29' checked/></th>
-                
-                <th>AH -0.5_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '30' checked/></th>
-                <th>AH -0.5_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '31' checked/></th>
-
-                <th>AH -0.25_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '32' checked/></th>
-                <th>AH -0.25_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '33' checked/></th>
-
-                <th>AH 0.0_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '34' checked/></th>
-                <th>AH 0.0_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '35' checked/></th>
-
-                <th>AH +0.25_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '36' checked/></th>
-                <th>AH +0.25_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '37' checked/></th>
-
-                <th>AH +0.5_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '38' checked/></th>
-                <th>AH +0.5_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '39' checked/></th>
-
-                <th>AH +0.75_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '40' checked/></th>
-                <th>AH +0.75_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '41' checked/></th>
-
-                <th>AH +1_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '42' checked/></th>
-                <th>AH +1_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '43' checked/></th>
-
-                <th>AH +1.25_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '44' checked/></th>
-                <th>AH +1.25_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '45' checked/></th>
-
-                <th>AH +1.5_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '46' checked/></th>
-                <th>AH +1.5_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '47' checked/></th>
-
-                <th>AH +1.75_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '48' checked/></th>
-                <th>AH +1.75_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '49' checked/></th>
-
-                <th>AH +2_1  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '50' checked/></th>
-                <th>AH +2_2  &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '51' checked/></th>
+                <th>AH Stake &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
+                <th>AH PnL &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
+               
 
                 </thead>
                 <tbody id="tbody_AH">
