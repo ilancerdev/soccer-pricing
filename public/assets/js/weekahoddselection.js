@@ -23,7 +23,7 @@ function rm_element(arr, value) {
 }
 
 $(document).ready(function(){
-
+  get_weekMatches_withAH();
   $('#WeekMatchTable_AH .table_header_checker').click(function(event){
     event.stopPropagation();
     value =  $(this).attr('value')
@@ -50,7 +50,7 @@ function stakeValueChanged()
   console.log(stake_val)
   $('#WeekMatchTable_MO').DataTable().clear(); 
   $('#WeekMatchTable_MO').DataTable().destroy(); 
-  get_weekMatches_withMO()
+  get_weekMatches_withAH()
 }
 
 function get_Stake_Pnl(actual_odd, real_odd)
@@ -164,7 +164,11 @@ function get_weekMatches_withAH()
         console.log(JSON.stringify(jqXHR));
         
         console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
-    }
+    },
+    complete:function(data){
+      timer =  setTimeout(get_weekMatches_withAH,300000);
+      //timer =  setTimeout(table.reload,3000);
+     }
 });
 }
 
