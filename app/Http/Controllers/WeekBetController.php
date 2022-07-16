@@ -237,7 +237,8 @@ class WeekBetController extends Controller
                 DB::raw('IF (a.status = "END" ,h2.AH_p1d75_1 , h4.AH_p1d75_1) AS AH_p1d75_1'),
                 DB::raw('IF (a.status = "END" ,h2.AH_p1d75_2 , h4.AH_p1d75_2) AS AH_p1d75_2'),
                 DB::raw('IF (a.status = "END" ,h2.AH_p2_1 , h4.AH_p2_1) AS AH_p2_1'),
-                DB::raw('IF (a.status = "END" ,h2.AH_p2_2 , h4.AH_p2_2) AS AH_p2_2')
+                DB::raw('IF (a.status = "END" ,h2.AH_p2_2 , h4.AH_p2_2) AS AH_p2_2') , 
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=a.c_WN and market=1) AS real_p1_1')
             )
             ->orderby("a.date")
             ->get();
