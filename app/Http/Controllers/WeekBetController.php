@@ -205,6 +205,7 @@ class WeekBetController extends Controller
                     $q -> orwhere('a.date', '=', $everyDate);
                 } 
             })
+            ->havingRaw('cream_status = "Non-Cream v Cream"')
             ->select(
                 DB::raw('e.`league_title` AS League') , 
                 DB::raw('d.`season_title` AS Season') , 
