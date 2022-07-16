@@ -239,7 +239,16 @@ class WeekBetController extends Controller
                 DB::raw('IF (a.status = "END" ,h2.AH_p1d75_2 , h4.AH_p1d75_2) AS AH_p1d75_2'),
                 DB::raw('IF (a.status = "END" ,h2.AH_p2_1 , h4.AH_p2_1) AS AH_p2_1'),
                 DB::raw('IF (a.status = "END" ,h2.AH_p2_2 , h4.AH_p2_2) AS AH_p2_2') , 
-                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=a.c_WN and market=1) AS real_p1_1')
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1) AS real_p1_1') ,
+                DB::raw('(SELECT away_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1) AS real_p1_2') ,
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.25) AS real_p1d25_1') ,
+                DB::raw('(SELECT away_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.25) AS real_p1d25_2') ,
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.5) AS real_p1d5_1') ,
+                DB::raw('(SELECT away_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.5) AS real_p1d5_2') ,
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.75) AS real_p1d75_1') ,
+                DB::raw('(SELECT away_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=1.75) AS real_p1d75_2') ,
+                DB::raw('(SELECT home_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=2) AS real_p2_1') ,
+                DB::raw('(SELECT away_price FROM real_ah_price_cl WHERE refer= CONCAT(e.league_title , cream_status) and c_week_number=647 and market=2) AS real_p2_2') ,
             )
             ->orderby("a.date")
             ->get();

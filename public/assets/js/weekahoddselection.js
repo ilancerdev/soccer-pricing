@@ -97,7 +97,7 @@ function get_weekMatches_withAH()
             var str_tr = "";
             for(var i = 0; i< len; i++)
             {
-              if (matches_object[i].cream_status == "Non-Cream v Cream"){
+              
                 str_tr += "<tr>" +
                 
                 "<td align='center'>" + matches_object[i].League + "</td>" +
@@ -135,7 +135,7 @@ function get_weekMatches_withAH()
                 "<td align='center'>" +   "</td>" +
                 
                 "</tr>";
-              }
+              
             
             }
             $('#tbody_AH').append(str_tr);
