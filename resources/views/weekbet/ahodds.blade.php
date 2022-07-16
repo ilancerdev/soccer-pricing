@@ -34,7 +34,7 @@
                 <th>Date            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '2'/></th>
                 <th>Week Number     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '3' checked/></th>
                 <th>Game            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '4'/></th>
-                <th>Game            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '5'/></th>
+                <th>Cream_status    &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '5'/></th>
                 <th>Score           &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '6'/></th>
                 <th>Result          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '7'/></th>
                 <th>Home Team       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '8'/></th>
@@ -49,11 +49,11 @@
                 <th>Dy_Rank(6)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '17'/></th>
                 <th>Dy_Rank(8)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '18'/></th>
 
-                <th>AH Market   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
-                <th>AH Bet   &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
+                <th>Handicap        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
+                <th>AH Bet          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
                 
-                <th>AH Stake &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
-                <th>AH PnL &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '22' checked/></th>
+                <th>AH Stake        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
+                <th>AH PnL          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '22' checked/></th>
                
 
                 </thead>
