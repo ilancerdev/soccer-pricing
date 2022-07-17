@@ -119,12 +119,12 @@ function get_weekMatches_withAH()
                   case p1_edge:
                       market = "+1";
                       bet =  p1_edge > 0 ? "Bet" : 'No Bet'
-                      var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1_1  , matches_object[i].real_p1_1) : '0'
+                      var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1_1  , matches_object[i].real_p1_1) : 0
                       stake = stake_.toFixed(2)
                       if (matches_object[i].Result != "-")
                       {
                           result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1
-                          var PnL_val = result_val > 0 ? home_Stake * (actual_home_price - 1): (0 - home_Stake)
+                          var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1_1 - 1): (0 - stake_)
                           PnL = PnL_val.toFixed(2)
 
                       }
@@ -132,12 +132,12 @@ function get_weekMatches_withAH()
                   case p1d25_edge:
                       market = "+1.25";
                       bet =  p1d25_edge > 0 ? "Bet" : 'No Bet'
-                      var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d25_1  , matches_object[i].real_p1d25_1) : '0'
+                      var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d25_1  , matches_object[i].real_p1d25_1) : 0
                       stake = stake_.toFixed(2)
                       if (matches_object[i].Result != "-")
                       {
                           result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.25
-                          var PnL_val = result_val > 0 ? home_Stake * (actual_home_price - 1): (0 - home_Stake)
+                          var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d25_1 - 1): (0 - stake_)
                           PnL = PnL_val.toFixed(2)
 
                       }
@@ -145,12 +145,12 @@ function get_weekMatches_withAH()
                   case p1d5_edge:
                     market = "+1.5";
                     bet =  p1d5_edge > 0 ? "Bet" : 'No Bet'
-                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d5_1  , matches_object[i].real_p1d5_1) : '0'
+                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d5_1  , matches_object[i].real_p1d5_1) : 0
                     stake = stake_.toFixed(2)
                     if (matches_object[i].Result != "-")
                     {
                         result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.5
-                        var PnL_val = result_val > 0 ? home_Stake * (actual_home_price - 1): (0 - home_Stake)
+                        var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d5_1 - 1): (0 - stake_)
                         PnL = PnL_val.toFixed(2)
 
                     }
@@ -158,12 +158,12 @@ function get_weekMatches_withAH()
                 case p1d75_edge:
                   market = "+1.75";
                   bet =  p1d75_edge > 0 ? "Bet" : 'No Bet'
-                  var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d75_1  , matches_object[i].real_p1d75_1) : '0'
+                  var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d75_1  , matches_object[i].real_p1d75_1) : 0
                   stake = stake_.toFixed(2)
                   if (matches_object[i].Result != "-")
                   {
                       result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.75
-                      var PnL_val = result_val > 0 ? home_Stake * (actual_home_price - 1): (0 - home_Stake)
+                      var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d75_1 - 1): (0 - stake_)
                       PnL = PnL_val.toFixed(2)
 
                   }
@@ -171,12 +171,12 @@ function get_weekMatches_withAH()
                 case p2_edge:
                     market = "+2";
                     bet =  p2_edge > 0 ? "Bet" : 'No Bet'
-                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p2_1  , matches_object[i].real_p2_1) : '0'
+                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p2_1  , matches_object[i].real_p2_1) : 0
                     stake = stake_.toFixed(2)
                     if (matches_object[i].Result != "-")
                     {
                         result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 2
-                        var PnL_val = result_val > 0 ? home_Stake * (actual_home_price - 1): (0 - home_Stake)
+                        var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p2_1 - 1): (0 - stake_)
                         PnL = PnL_val.toFixed(2)
 
                     }
