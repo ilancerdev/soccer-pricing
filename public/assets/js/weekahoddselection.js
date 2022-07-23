@@ -104,7 +104,7 @@ function get_weekMatches_withAH()
             var str_tr = "";
             for(var i = 0; i< len; i++)
             {
-                var market = "" , bet = "" , stake = "", PnL = ""
+                var market = "" , bet = "" , stake = "", PnL = "" , A_prie_1 = "", A_prie_2 = "" , Real_price_1 = "" , Real_price_2 = "" , edge =  ""
                 p1_edge = get_edge(matches_object[i].AH_p1_1 , matches_object[i].real_p1_1)
                 p1d25_edge = get_edge(matches_object[i].AH_p1d25_1 , matches_object[i].real_p1d25_1)
                 p1d5_edge = get_edge(matches_object[i].AH_p1d5_1 , matches_object[i].real_p1d5_1)
@@ -118,6 +118,11 @@ function get_weekMatches_withAH()
                 switch(max){
                   case p1_edge:
                       market = "+1";
+                      A_prie_1 = matches_object[i].AH_p1_1
+                      A_prie_2 = matches_object[i].AH_p1_2
+                      Real_price_1 = matches_object[i].real_p1_1
+                      Real_price_2 = matches_object[i].real_p1_2
+                      edge = p1_edge
                       bet =  p1_edge > 0 ? "Bet" : 'No Bet'
                       var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1_1  , matches_object[i].real_p1_1) : 0
                       stake = stake_.toFixed(2)
@@ -131,6 +136,11 @@ function get_weekMatches_withAH()
                       break
                   case p1d25_edge:
                       market = "+1.25";
+                      A_prie_1 = matches_object[i].AH_p1d25_1
+                      A_prie_2 = matches_object[i].AH_p1d25_2
+                      Real_price_1 = matches_object[i].real_p1d25_1
+                      Real_price_2 = matches_object[i].real_p1d25_2
+                      edge = p1d25_edge
                       bet =  p1d25_edge > 0 ? "Bet" : 'No Bet'
                       var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d25_1  , matches_object[i].real_p1d25_1) : 0
                       stake = stake_.toFixed(2)
@@ -143,33 +153,48 @@ function get_weekMatches_withAH()
                       }
                       break
                   case p1d5_edge:
-                    market = "+1.5";
-                    bet =  p1d5_edge > 0 ? "Bet" : 'No Bet'
-                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d5_1  , matches_object[i].real_p1d5_1) : 0
+                      market = "+1.5";
+                      A_prie_1 = matches_object[i].AH_p1d5_1
+                      A_prie_2 = matches_object[i].AH_p1d5_2
+                      Real_price_1 = matches_object[i].real_p1d5_1
+                      Real_price_2 = matches_object[i].real_p1d5_2
+                      edge = p1d5_edge
+                      bet =  p1d5_edge > 0 ? "Bet" : 'No Bet'
+                      var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d5_1  , matches_object[i].real_p1d5_1) : 0
+                      stake = stake_.toFixed(2)
+                      if (matches_object[i].Result != "-")
+                      {
+                          result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.5
+                          var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d5_1 - 1): (0 - stake_)
+                          PnL = PnL_val.toFixed(2)
+
+                      }
+                      break 
+                case p1d75_edge:
+                    market = "+1.75";
+                    A_prie_1 = matches_object[i].AH_p1d75_1
+                      A_prie_2 = matches_object[i].AH_p1d75_2
+                      Real_price_1 = matches_object[i].real_p1d75_1
+                      Real_price_2 = matches_object[i].real_p1d75_2
+                      edge = p1d75_edge
+                    bet =  p1d75_edge > 0 ? "Bet" : 'No Bet'
+                    var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d75_1  , matches_object[i].real_p1d75_1) : 0
                     stake = stake_.toFixed(2)
                     if (matches_object[i].Result != "-")
                     {
-                        result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.5
-                        var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d5_1 - 1): (0 - stake_)
+                        result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.75
+                        var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d75_1 - 1): (0 - stake_)
                         PnL = PnL_val.toFixed(2)
 
                     }
-                    break 
-                case p1d75_edge:
-                  market = "+1.75";
-                  bet =  p1d75_edge > 0 ? "Bet" : 'No Bet'
-                  var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p1d75_1  , matches_object[i].real_p1d75_1) : 0
-                  stake = stake_.toFixed(2)
-                  if (matches_object[i].Result != "-")
-                  {
-                      result_val = parseFloat(matches_object[i].home_score) - parseFloat(matches_object[i].away_score) + 1.75
-                      var PnL_val = result_val > 0 ? stake_ * (matches_object[i].AH_p1d75_1 - 1): (0 - stake_)
-                      PnL = PnL_val.toFixed(2)
-
-                  }
-                  break  
+                    break  
                 case p2_edge:
                     market = "+2";
+                    A_prie_1 = matches_object[i].AH_p2_1
+                      A_prie_2 = matches_object[i].AH_p2_2
+                      Real_price_1 = matches_object[i].real_p2_1
+                      Real_price_2 = matches_object[i].real_p2_2
+                      edge = p2_edge
                     bet =  p2_edge > 0 ? "Bet" : 'No Bet'
                     var stake_ = bet == 'Bet' ? get_Stake_Pnl(matches_object[i].AH_p2_1  , matches_object[i].real_p2_1) : 0
                     stake = stake_.toFixed(2)
@@ -190,33 +215,24 @@ function get_weekMatches_withAH()
                 "<td align='center'>" + matches_object[i].League + "</td>" +
                 "<td align='center'>" + matches_object[i].Season + "</td>" +
                 "<td align='center'>" + matches_object[i].Date + "</td>" +
-                
-                "<td align='center'>" + matches_object[i].WN + "</td>" +
                 "<td align='center'>" + matches_object[i].Game + "</td>" +
                 "<td align='center'>" + matches_object[i].cream_status + "</td>" +
                 "<td align='center'>" + matches_object[i].Score + "</td>" +
                 "<td align='center'>" + matches_object[i].Result + "</td>" +
                 "<td align='center'>" + matches_object[i].Home_team_name + "</td>" +
-            
-                "<td align='center'>" + matches_object[i].Static_HRank + "</td>" +
-              
-                "<td align='center'>" + matches_object[i].Dynamic_HRank_6 + "</td>" +
-                
                 "<td align='center'>" + matches_object[i].Dynamic_HRank_8 + "</td>" +
-      
-                "<td align='center'>" + matches_object[i].Away_team_name + "</td>" +
-                
-                "<td align='center'>" + matches_object[i].Static_ARank + "</td>" +
-            
-                "<td align='center'>" + matches_object[i].Dynamic_ARank_6 + "</td>" +
-          
+                "<td align='center'>" + matches_object[i].Away_team_name + "</td>" + 
                 "<td align='center'>" + matches_object[i].Dynamic_ARank_8 + "</td>" +
-        
                 "<td align='center'>" + matches_object[i].staticRank + "</td>" +
-                "<td align='center'>" + matches_object[i].Dynamic_HRank_6 + " v " + matches_object[i].Dynamic_ARank_6 + "</td>" +
                 "<td align='center'>" +  matches_object[i].Dynamic_HRank_8 + " v " + matches_object[i].Dynamic_ARank_8 + "</td>" +
-
                 "<td align='center'>" +   market + "</td>" +
+
+                "<td align='center'>" +   A_prie_1 + "</td>" +
+                "<td align='center'>" +   A_prie_2 + "</td>" +
+                "<td align='center'>" +   Real_price_1 + "</td>" +
+                "<td align='center'>" +   Real_price_2 + "</td>" +
+                "<td align='center'>" +   edge + "</td>" +
+
                 "<td align='center'>" +   bet + "</td>" +
                 "<td align='center'>" +   stake + "</td>" +
                 "<td align='center'>" +   PnL + "</td>" +

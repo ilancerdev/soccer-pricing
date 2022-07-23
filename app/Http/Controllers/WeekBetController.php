@@ -210,7 +210,7 @@ class WeekBetController extends Controller
                 DB::raw('e.`league_title` AS League') , 
                 DB::raw('d.`season_title` AS Season') , 
                 DB::raw('a.`date` AS Date') , 
-                DB::raw('a.WN') , 
+                
                 DB::raw(" CONCAT(b.`team_name` , ' : ', c.`team_name` ) AS Game"),
                 DB::raw("CONCAT ( (SELECT IF ((SELECT cream_status FROM cream_team_list  WHERE team_id = a.home_team_id and season_id = a.season_id) != 'Non-Cream',(SELECT cream_status FROM cream_team_list WHERE team_id = a.home_team_id and season_id = a.season_id) ,'Non-Cream' )), 
                 ' v ' , 
@@ -222,12 +222,8 @@ class WeekBetController extends Controller
                 DB::raw('IF(a.status = "END", IF( a.total_home_score > a.total_away_score, "H" , IF(a.total_home_score = a.total_away_score ,"D" ,"A") )  , "-") AS Result'),
                 
                 DB::raw("b.team_name as Home_team_name") ,
-                DB::raw('f.S_H_ranking AS Static_HRank') , 
-                DB::raw("a.D_Home_ranking_6 AS Dynamic_HRank_6"),
                 DB::raw("a.D_Home_ranking_8 AS Dynamic_HRank_8") , 
                 DB::raw("c.team_name as Away_team_name") ,
-                DB::raw("g.S_A_ranking AS Static_ARank") ,
-                DB::raw("a.D_Away_ranking_6 AS Dynamic_ARank_6"),
                 DB::raw("a.D_Away_ranking_8 AS Dynamic_ARank_8"), 
                 DB::raw("CONCAT(f.`S_H_ranking`, ' v ' , g.`S_A_ranking`) AS staticRank") , 
 

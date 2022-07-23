@@ -32,28 +32,25 @@
                 <th>League &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '0' checked/></th>
                 <th>Season          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '1' checked/></th>
                 <th>Date            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '2'/></th>
-                <th>Week Number     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '3' checked/></th>
-                <th>Game            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '4'/></th>
-                <th>Cream_status    &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '5'/></th>
-                <th>Score           &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '6'/></th>
-                <th>Result          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '7'/></th>
-                <th>Home Team       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '8'/></th>
-                <th>St_HRank        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '9'/></th>
-                <th>Dy_HRank(6)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '10'/></th>
-                <th>Dy_HRank(8)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '11'/></th>
-                <th>Away Team       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '12'/></th>
-                <th>St_ARank        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '13'/></th>
-                <th>Dy_ARank(6)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '14'/></th>
-                <th>Dy_ARank(8)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '15'/></th>
-                <th>St_Rank         &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '16'/></th>
-                <th>Dy_Rank(6)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '17'/></th>
-                <th>Dy_Rank(8)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '18'/></th>
-
-                <th>Handicap        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
-                <th>AH Bet          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
-                
-                <th>AH Stake        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
-                <th>AH PnL          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '22' checked/></th>
+                <th>Game            &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '3'/></th>
+                <th>Cream_status    &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '4'/></th>
+                <th>Score           &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '5'/></th>
+                <th>Result          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '6'/></th>
+                <th>Home Team       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '7'/></th>
+                <th>Dy_HRank(8)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '8'/></th>
+                <th>Away Team       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '9'/></th>
+                <th>Dy_ARank(8)     &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '10'/></th>
+                <th>St_Rank         &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '11'/></th>
+                <th>Dy_Rank(8)      &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '12'/></th>
+                <th>Handicap        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '13' checked/></th>
+                <th>A_Price_1       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '14' checked/></th>
+                <th>A_Price_2       &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '15' checked/></th>
+                <th>Real_Price_1    &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '16' checked/></th>
+                <th>Real_Price_2    &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '17' checked/></th>
+                <th> Edge           &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '18' checked/></th>
+                <th>AH Bet          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '19' checked/></th>
+                <th>AH Stake        &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '20' checked/></th>
+                <th>AH PnL          &nbsp;<input type="checkbox" class='table_header_checker' name="League" value = '21' checked/></th>
                
 
                 </thead>
